@@ -1,6 +1,8 @@
+import React from "react";
 import { Ubuntu } from "next/font/google";
 import Head from "next/head";
 import "@/styles/Home.module.css";
+import CardStepOne from "../components/CardStepOne";
 
 const ubuntu = Ubuntu({
   subsets: [
@@ -38,7 +40,9 @@ export default function Home() {
               <img src="/bg-sidebar-desktop.svg" />
             </div>
           </div>
-          <div className="card__content"></div>
+          <div className="card__content">
+            <CardStepOne />
+          </div>
         </div>
       </main>
     </>
