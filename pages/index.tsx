@@ -1,8 +1,15 @@
 import React from "react";
-import { Ubuntu } from "next/font/google";
 import Head from "next/head";
-import "/styles/Home.module.css";
+import { Ubuntu } from "next/font/google";
+import "../styles/Home.module.css";
+// redux
+import { useAppSelector, useAppDispatch } from "../hooks";
+import { nextStep, goBack, selectStepCount } from "../slices/stepCounterSlice";
+// Components
 import CardStepOne from "../components/CardStepOne";
+import CardStepTwo from "../components/CardStepTwo";
+import CardStepThree from "../components/CardStepThree";
+import CardStepFour from "../components/CardStepFour";
 
 const ubuntu = Ubuntu({
   subsets: [
@@ -17,6 +24,8 @@ const ubuntu = Ubuntu({
 });
 
 export default function Home() {
+  const stepCount = useAppSelector(selectStepCount);
+  const dispatch = useAppDispatch();
   return (
     <>
       <Head>
@@ -42,7 +51,11 @@ export default function Home() {
             </div>
           </div>
           <div className="card__content">
+            {stepCount}
             <CardStepOne />
+            <CardStepTwo />
+            <CardStepThree />
+            <CardStepFour />
           </div>
         </div>
       </main>
