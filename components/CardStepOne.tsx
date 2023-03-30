@@ -27,7 +27,7 @@ function CardStepOne(Props) {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = () => {
     Props.dispatch(nextStep());
   };
 
