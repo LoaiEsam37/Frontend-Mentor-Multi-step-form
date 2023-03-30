@@ -12,23 +12,22 @@ const initialState: CounterState = {
 };
 
 export const stepCounterSlice = createSlice({
-  name: "counter",
+  name: "stepCounter",
   initialState: {
     value: 1,
   },
   reducers: {
     nextStep: (state) => {
-      state.value += 1;
+      if (state.value < 4) state.value += 1;
     },
     goBack: (state) => {
-      state.value -= 1;
+      if (state.value > 1) state.value -= 1;
     },
   },
 });
 
 export const { nextStep, goBack } = stepCounterSlice.actions;
 
-// Other code such as selectors can use the imported `RootState` type
 export const selectStepCount = (state: RootState) => state.stepCounter.value;
 
 export default stepCounterSlice.reducer;

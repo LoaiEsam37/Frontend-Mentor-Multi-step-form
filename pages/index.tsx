@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import { Ubuntu } from "next/font/google";
-import "../styles/Home.module.css";
 // redux
 import { useAppSelector, useAppDispatch } from "../hooks";
 import { nextStep, goBack, selectStepCount } from "../slices/stepCounterSlice";
@@ -51,11 +50,16 @@ export default function Home() {
             </div>
           </div>
           <div className="card__content">
-            {stepCount}
-            <CardStepOne />
-            <CardStepTwo />
-            <CardStepThree />
-            <CardStepFour />
+            <section>
+              {stepCount === 1 && <CardStepOne />}
+              {stepCount === 2 && <CardStepTwo />}
+              {stepCount === 3 && <CardStepThree />}
+              {stepCount === 4 && <CardStepFour />}
+            </section>
+            <section>
+              <button onClick={() => dispatch(goBack())}>Go Back</button>
+              <button onClick={() => dispatch(nextStep())}>Next Step</button>
+            </section>
           </div>
         </div>
       </main>
