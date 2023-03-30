@@ -42,21 +42,21 @@ function CardStepOne(Props) {
           placeholder="e.g. Stephen King"
           {...register("name")}
         />
-        {errors?.name && <p>{errors.name.message}</p>}
+        {errors?.name && <p>{errors.name.message.toString()}</p>}
         <label>Email Address</label>
         <input
           type="text"
           placeholder="e.g. stephenking@lorem.com"
           {...register("email")}
         />
-        {errors?.email && <p>{errors.email.message}</p>}
+        {errors?.email && <p>{errors.email.message.toString()}</p>}
         <label>Phone Number</label>
         <input
           type="text"
           placeholder="e.g. +1 234 567 890"
           {...register("phone")}
         />
-        {errors?.phone && <p>{errors.phone.message}</p>}
+        {errors?.phone && <p>{errors.phone.message.toString()}</p>}
         <SubmitButton marginTop="60px" />
       </form>
     </div>
