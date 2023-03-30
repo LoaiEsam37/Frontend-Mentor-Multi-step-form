@@ -1,7 +1,7 @@
 import React from "react";
 import { Ubuntu } from "next/font/google";
 import Head from "next/head";
-import "@/styles/Home.module.css";
+import "/styles/Home.module.css";
 import CardStepOne from "../components/CardStepOne";
 
 const ubuntu = Ubuntu({
@@ -37,7 +37,8 @@ export default function Home() {
         <div className="card">
           <div className="card__sidebar">
             <div className="img__wrapper">
-              <img src="/bg-sidebar-desktop.svg" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/bg-sidebar-desktop.svg" alt="sidebar background" />
             </div>
           </div>
           <div className="card__content">

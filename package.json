@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "watch:css": "stylelint '**/*.css' --fix",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:css": "stylelint '**/*.css' --fix"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.0.0",

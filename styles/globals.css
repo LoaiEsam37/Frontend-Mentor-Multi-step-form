@@ -1,11 +1,12 @@
 body {
   background-color: #eef5ff;
+  min-height: 100vh;
 }
 
 main {
   font-family: ubuntu, sans-serif;
-  display: flex;
   min-height: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
