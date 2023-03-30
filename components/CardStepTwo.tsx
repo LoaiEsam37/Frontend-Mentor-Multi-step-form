@@ -1,6 +1,6 @@
 import React from "react";
 
-function CardStepTwo() {
+function CardStepTwo(Props) {
   return <div>CardStepTwo</div>;
 }
 

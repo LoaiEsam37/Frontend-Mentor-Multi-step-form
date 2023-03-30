@@ -1,0 +1,57 @@
+.CardStepOne,
+.CardStepOne form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  height: 100%;
+}
+
+.CardStepOne {
+  margin-top: 45px;
+  width: 100%;
+  height: 100%;
+  padding-left: 90px;
+}
+
+.CardStepOne h1 {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.CardStepOne p {
+  font-weight: 300;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.CardStepOne form {
+  width: 440px;
+  margin-top: 20px;
+}
+
+.CardStepOne form input {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid hsl(246, 25%, 77%);
+  padding: 5px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.CardStepOne form input:focus {
+  outline: none;
+  border-color: black;
+}
+
+.CardStepOne form label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.CardStepOne form p {
+  font-size: 13px;
+  color: red;
+  margin-top: -10px;
+}
