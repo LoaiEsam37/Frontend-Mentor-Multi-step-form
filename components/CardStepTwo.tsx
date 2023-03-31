@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "../styles/CardStepTwo.module.css";
 import Image from "next/image";
 import { goBack, nextStep } from "../slices/stepCounterSlice";
-import { object } from "yup";
+import { assignObject } from "../slices/dataObjectSlice";
 
 function CardStepTwo(Props) {
   const [choice, setChoice] = useState("");
@@ -23,6 +23,7 @@ function CardStepTwo(Props) {
         paymentOption: paymentOption ? "yearly" : "monthly",
       };
 
+      Props.dispatch(assignObject(data));
       Props.dispatch(nextStep());
     }
   };

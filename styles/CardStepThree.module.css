@@ -1,0 +1,179 @@
+.CardStepThree {
+  height: 100%;
+  width: 100%;
+  padding-left: 90px;
+  padding-top: 45px;
+  padding-right: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.CardStepThree h1 {
+  font-size: 30px;
+}
+
+.CardStepThree p:first-of-type {
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.CardStepThree .card {
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  border: 1px solid #dbdbdd;
+  margin-top: 20px;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 20px;
+}
+
+.CardStepThree .card:hover,
+.CardStepThree .card input:hover {
+  cursor: pointer;
+}
+
+.CardStepThree .card input:checked {
+  color: red;
+}
+
+
+.CardStepThree .card div {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  top: 10px;
+  left: 60px;
+}
+
+.CardStepThree .card div span {
+  margin-bottom: -10px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.CardStepThree .card span:last-child {
+  color: #413bf3;
+}
+
+.CardStepThree .card div p {
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.active {
+  outline: 1px solid #413bf3;
+  background-color: #f8f9fe;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 17px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 17px;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+/* stylelint-disable-next-line no-descending-specificity */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked~.checkmark {
+  background-color: #413bf3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked~.checkmark::after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark::after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+
+.buttons {
+  display: flex;
+  margin-top: 120px;
+  justify-content: space-between;
+  width: 410px;
+  position: relative;
+}
+
+.buttons button:nth-child(1) {
+  width: 110px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  color: #9a9aa4;
+  background-color: transparent;
+}
+
+.buttons button:nth-child(2) {
+  width: 110px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  background-color: #03295a;
+  border-radius: 5px;
+}
+
+.buttons button {
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin: 15px 0 0 120px;
+}

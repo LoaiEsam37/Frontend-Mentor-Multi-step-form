@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { nextStep } from "../slices/stepCounterSlice";
+import { assignObject } from "../slices/dataObjectSlice";
 
 function CardStepOne(Props) {
   const schema = yup.object().shape({
@@ -26,7 +27,8 @@ function CardStepOne(Props) {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = () => {
+  const onSubmit = (data) => {
+    Props.dispatch(assignObject(data));
     Props.dispatch(nextStep());
   };
 

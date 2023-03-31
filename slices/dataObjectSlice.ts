@@ -26,6 +26,6 @@ export const dataObjectSlice = createSlice({
 
 export const { assignObject } = dataObjectSlice.actions;
 
-export const selectStepCount = (state: RootState) => state.dataObject.value;
+export const selectDataObject = (state: RootState) => state.dataObject.value;
 
 export default dataObjectSlice.reducer;
