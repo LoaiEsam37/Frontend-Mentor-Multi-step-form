@@ -19,7 +19,6 @@ function CardStepFour(Props) {
     }
   };
   const getServicesPrice = () => {
-    if (dataObject?.services === []) return 0;
     let total = 0;
     dataObject?.services.map((service) => {
       if (service === "Online service") {
@@ -72,7 +71,7 @@ function CardStepFour(Props) {
         <hr />
         {dataObject?.services.map((service: string) => {
           return (
-            <div className={styles.flex}>
+            <div className={styles.flex} key={service}>
               <span className={styles.greyColor}>{service}</span>
               <span>
                 +${getServicePrice(service)}/
