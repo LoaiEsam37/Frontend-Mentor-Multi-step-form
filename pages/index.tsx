@@ -10,6 +10,7 @@ import CardStepOne from "../components/CardStepOne";
 import CardStepTwo from "../components/CardStepTwo";
 import CardStepThree from "../components/CardStepThree";
 import CardStepFour from "../components/CardStepFour";
+import ThankYou from "../components/ThankYou";
 
 const ubuntu = Ubuntu({
   subsets: [
@@ -69,7 +70,7 @@ export default function Home() {
                 <span>add-ons</span>
               </div>
               <div
-                className={`${styles.item} ${stepCount === 4 && styles.active}`}
+                className={`${styles.item} ${stepCount >= 4 && styles.active}`}
               >
                 <p>step 4</p>
                 <span>summary</span>
@@ -81,6 +82,7 @@ export default function Home() {
             {stepCount === 2 && <CardStepTwo dispatch={dispatch} />}
             {stepCount === 3 && <CardStepThree dispatch={dispatch} />}
             {stepCount === 4 && <CardStepFour dispatch={dispatch} />}
+            {stepCount === 5 && <ThankYou />}
           </div>
         </div>
       </main>

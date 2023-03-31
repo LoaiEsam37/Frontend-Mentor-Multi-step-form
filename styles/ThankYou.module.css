@@ -1,0 +1,22 @@
+.ThankYou {
+  text-align: center;
+  padding: 0 50px 0 50px;
+}
+
+.ThankYou h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.ThankYou p {
+  font-weight: 300;
+}
+
+.icon {
+  background-image: url(../public/icon-thank-you.svg);
+  background-size: cover;
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  margin-bottom: 20px;
+}

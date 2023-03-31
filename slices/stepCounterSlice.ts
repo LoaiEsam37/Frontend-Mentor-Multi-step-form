@@ -19,7 +19,7 @@ export const stepCounterSlice = createSlice({
   },
   reducers: {
     nextStep: (state) => {
-      if (state.value < 4) state.value += 1;
+      if (state.value < 5) state.value += 1;
     },
     goBack: (state) => {
       if (state.value > 1) state.value -= 1;

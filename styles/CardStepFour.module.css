@@ -1,0 +1,106 @@
+.CardStepFour {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  padding-left: 45px;
+  padding-top: 60px;
+  padding-right: 80px;
+}
+
+.CardStepFour h1 {
+  font-size: 30px;
+}
+
+.CardStepFour p:first-of-type {
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.CardStepFour .card {
+  background-color: #f8f9fe;
+  border-radius: 5px;
+  width: 100%;
+  height: max-content;
+  text-transform: capitalize;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px 0 20px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.flex:nth-last-child(1) {
+  margin-bottom: 20px;
+}
+
+.CardStepFour .card .flex:first-of-type div {
+  display: flex;
+  flex-direction: column;
+}
+
+.CardStepFour .card .flex:first-of-type div span:last-child {
+  text-decoration: underline;
+}
+
+.CardStepFour .card .flex:first-of-type div span:last-child:hover {
+  cursor: pointer;
+}
+
+.CardStepFour hr {
+  width: 91%;
+  border: 0.1px solid #e7e8ed;
+}
+
+.total {
+  color: #3d31e6;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.greyColor {
+  color: #94949e;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 90px;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.buttons button:nth-child(1) {
+  width: 110px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  color: #9a9aa4;
+  background-color: transparent;
+}
+
+.buttons button:nth-child(2) {
+  width: 120px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  background-color: #03295a;
+  border-radius: 5px;
+}
+
+.buttons button {
+  cursor: pointer;
+}

@@ -14,12 +14,12 @@ function CardStepTwo(Props) {
       setError(true);
     } else {
       interface dataInter {
-        choice: string;
+        plan: string;
         paymentOption: string;
       }
 
       const data: dataInter = {
-        choice: choice,
+        plan: choice,
         paymentOption: paymentOption ? "yearly" : "monthly",
       };
 

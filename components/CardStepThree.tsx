@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { selectDataObject } from "../slices/dataObjectSlice";
 import { useAppSelector } from "../hooks";
 import styles from "../styles/CardStepThree.module.css";
-import { nextStep } from "../slices/stepCounterSlice";
+import { nextStep, goBack } from "../slices/stepCounterSlice";
 import { assignObject } from "../slices/dataObjectSlice";
 
 function CardStepThree(Props) {

@@ -3,19 +3,43 @@ import type { RootState } from "../store";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
 // Define a type for the slice state
+
+interface valueInter {
+  phone: Number;
+  email: string;
+  name: string;
+  plan: string;
+  paymentOption: string;
+  services: string[];
+}
+
 interface DataState {
-  value: number;
+  value: valueInter;
 }
 
 // Define the initial state using that type
 const initialState: DataState = {
-  value: 0,
+  value: {
+    phone: undefined,
+    email: "",
+    name: "",
+    plan: "",
+    paymentOption: "",
+    services: [],
+  },
 };
 
 export const dataObjectSlice = createSlice({
   name: "dataObject",
   initialState: {
-    value: {},
+    value: {
+      phone: undefined,
+      email: "",
+      name: "",
+      plan: "",
+      paymentOption: "",
+      services: [],
+    },
   },
   reducers: {
     assignObject: (state, action: PayloadAction<object>) => {
