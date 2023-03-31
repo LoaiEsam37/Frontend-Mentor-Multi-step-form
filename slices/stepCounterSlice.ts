@@ -32,7 +32,7 @@ export const stepCounterSlice = createSlice({
   },
 });
 
-export const { nextStep, goBack } = stepCounterSlice.actions;
+export const { nextStep, goBack, goBackByAmount } = stepCounterSlice.actions;
 
 export const selectStepCount = (state: RootState) => state.stepCounter.value;
 

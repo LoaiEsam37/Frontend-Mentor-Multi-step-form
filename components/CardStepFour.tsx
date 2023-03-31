@@ -3,7 +3,7 @@ import { selectDataObject } from "../slices/dataObjectSlice";
 import { useAppSelector } from "../hooks";
 import styles from "../styles/CardStepFour.module.css";
 import { number } from "yup";
-import { goBack, nextStep } from "../slices/stepCounterSlice";
+import { goBack, nextStep, goBackByAmount } from "../slices/stepCounterSlice";
 function CardStepFour(Props) {
   const dataObject = useAppSelector(selectDataObject);
   const getPlanPrice = () => {
@@ -62,7 +62,12 @@ function CardStepFour(Props) {
             <span>
               {dataObject?.plan} ({dataObject?.paymentOption})
             </span>
-            <span className={styles.greyColor}>Change</span>
+            <span
+              className={styles.greyColor}
+              onClick={() => Props.dispatch(goBackByAmount(2))}
+            >
+              Change
+            </span>
           </div>
           <span>
             ${getPlanPrice()}/{dataObject?.paymentOption}
