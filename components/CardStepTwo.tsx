@@ -23,7 +23,6 @@ function CardStepTwo(Props) {
         paymentOption: paymentOption ? "yearly" : "monthly",
       };
 
-      console.log(data);
       Props.dispatch(nextStep());
     }
   };
