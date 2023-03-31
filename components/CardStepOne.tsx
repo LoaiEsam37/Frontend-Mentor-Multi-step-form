@@ -57,7 +57,7 @@ function CardStepOne(Props) {
           {...register("phone")}
         />
         {errors?.phone && <p>{errors.phone.message.toString()}</p>}
-        <SubmitButton marginTop="60px" />
+        <button type="submit">Next Step</button>
       </form>
     </div>
   );
