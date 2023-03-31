@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../styles/CardStepOne.module.css";
-import SubmitButton from "./SubmitButton";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";

@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { RootState } from "../store";
+import type { PayloadAction } from "@reduxjs/toolkit";
 
 // Define a type for the slice state
 interface CounterState {
@@ -22,6 +23,11 @@ export const stepCounterSlice = createSlice({
     },
     goBack: (state) => {
       if (state.value > 1) state.value -= 1;
+    },
+    goBackByAmount(state, action: PayloadAction<number>) {
+      if (state.value - action.payload > 0) {
+        state.value -= action.payload;
+      }
     },
   },
 });
